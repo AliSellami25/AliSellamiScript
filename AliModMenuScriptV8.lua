@@ -109,7 +109,7 @@ if not allowedAndroidIDs[currentAndroidID] then
   os.exit()
 end
 
-gg.alert("🟩 𝘿𝙚𝙫𝙞𝙘𝙚 𝘼𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙")
+gg.alert("🟩 𝘿𝙚𝙫𝙞𝙘𝙚 𝘼𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙!")
 
 
 
