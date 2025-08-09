@@ -1,6 +1,6 @@
-local VERSION = "8.0"
+local VERSION = "8.2"
 local VERSION_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/ScriptVersion.txt"
-local SCRIPT_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/AliModMenuScriptV8.lua
+local SCRIPT_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/AliModMenuScriptV8.lua"
 local SCRIPT_PATH = "/sdcard/Ali&Hope/Brent scripts and Ali newest script /AliModMenuScriptV8.lua"
 
 local function http_get(url)
@@ -8,7 +8,7 @@ local function http_get(url)
     if res and res.content then
         return res.content
     else
-        gg.toast("⚠️ 𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙜𝙚𝙩 𝙘𝙤𝙣𝙩𝙚𝙣𝙩 𝙛𝙧𝙤𝙢 𝙪𝙧𝙡 ❌")
+        gg.toast("⚠️ 𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙜𝙚𝙩 𝙘𝙤𝙣𝙩𝙚𝙣𝙩 ❌")
         return nil
     end
 end
