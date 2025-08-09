@@ -1,4 +1,4 @@
-local VERSION = "8.0"
+local VERSION = "8.4"
 local VERSION_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/ScriptVersion.txt"
 local SCRIPT_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/AliModMenuScriptV8.lua"
 local SCRIPT_PATH = "/sdcard/Ali&Hope/Brent scripts and Ali newest script /AliModMenuScriptV8.lua"
