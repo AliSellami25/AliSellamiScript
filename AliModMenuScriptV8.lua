@@ -383,6 +383,7 @@ local menu = {
   " ➤ ☀️☀️ 𝙂𝙧𝙖𝙥𝙝𝙞𝙘𝙨 𝙈𝙚𝙣𝙪 ☀️☀️",
   " ➤ 🎯🔪 𝟬 𝘿𝙖𝙢𝙖𝙜𝙚 𝘾𝙤𝙙𝙚 🔪🎯",
   " ➤ ➖❎ 𝙄𝙢𝙢𝙤 𝙢𝙚𝙣𝙪 ❎➖",
+  " ➤ 🧬👥 𝙂𝙚𝙣𝙙𝙚𝙧𝙡𝙚𝙨𝙨 𝘾𝙤𝙙𝙚 🧬👥",
   " ➤ 🚪🚪 𝙀𝙭𝙞𝙩 𝙎𝙘𝙧𝙞𝙥𝙩 🚪🚪"
 }
 
@@ -2151,8 +2152,22 @@ gg.clearResults()
 
   subMenu8()
 end
-if choice == 44 then
+  if choice == 44 then
     zt = 45
+    gg.setRanges(gg.REGION_ANONYMOUS)
+gg.clearResults()
+gg.searchNumber("9794", gg.TYPE_WORD)
+gg.getResults(300)
+gg.editAll("26", gg.TYPE_WORD)
+gg.clearResults()
+gg.searchNumber(";Sex", gg.TYPE_WORD)
+gg.getResults(500)
+gg.editAll(";0", gg.TYPE_WORD)
+    gg.toast("🎩👒 𝙉𝙤𝙬 𝙍𝙚𝙟𝙤𝙞𝙣 👒🎩")
+gg.clearResults()
+  end
+if choice == 45 then
+    zt = 46
     gg.toast("❌ 𝙈𝙚𝙣𝙪 𝘾𝙡𝙤𝙨𝙚𝙙 ❌")
     print("𝙃𝙖𝙫𝙚 𝙖 𝙜𝙤𝙤𝙙 𝙙𝙖𝙮!!\n𝙀𝙭𝙞𝙩.")
     os.exit()
