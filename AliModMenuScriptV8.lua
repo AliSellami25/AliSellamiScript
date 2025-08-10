@@ -1,47 +1,4 @@
-local VERSION = "8.4"
-local VERSION_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/ScriptVersion.txt"
-local SCRIPT_URL = "https://raw.githubusercontent.com/AliSellami25/AliSellamiScript/main/AliModMenuScriptV8.lua"
-local SCRIPT_PATH = "/sdcard/Ali&Hope/Brent scripts and Ali newest script /AliModMenuScriptV8.lua"
 
-local function http_get(url)
-    local res = gg.makeRequest(url)
-    if res and res.content then
-        return res.content
-    else
-        gg.toast("⚠️ 𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙜𝙚𝙩 𝙘𝙤𝙣𝙩𝙚𝙣𝙩 ❌")
-        return nil
-    end
-end
-
-local function auto_update()
-    local remote_version = http_get(VERSION_URL)
-    if not remote_version then
-        gg.toast("⚠️ 𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙘𝙝𝙚𝙘𝙠 𝙪𝙥𝙙𝙖𝙩𝙚 ❌")
-        return
-    end
-    remote_version = remote_version:match("([%d%.]+)")
-    if tonumber(remote_version) and tonumber(remote_version) > tonumber(VERSION) then
-        gg.alert("✅ 𝙉𝙚𝙬 𝙫𝙚𝙧𝙨𝙞𝙤𝙣 𝙛𝙤𝙪𝙣𝙙: 𝙑"..remote_version.." 🚀")
-        local new_script = http_get(SCRIPT_URL)
-        if new_script then
-            local f = io.open(SCRIPT_PATH, "w+")
-            if f then
-                f:write(new_script)
-                f:close()
-                gg.alert("✅ 𝙎𝙘𝙧𝙞𝙥𝙩 𝙪𝙥𝙙𝙖𝙩𝙚𝙙 𝙩𝙤 𝙫"..remote_version.." 🎉")
-                os.exit()
-            else
-                gg.toast("⚠️ 𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙬𝙧𝙞𝙩𝙚 𝙨𝙘𝙧𝙞𝙥𝙩 ❌")
-            end
-        else
-            gg.toast("⚠️ 𝙁𝙖𝙞𝙡𝙚𝙙 𝙩𝙤 𝙙𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙨𝙘𝙧𝙞𝙥𝙩 ❌")
-        end
-    else
-        gg.toast("✅ 𝙎𝙘𝙧𝙞𝙥𝙩 𝙞𝙨 𝙪𝙥 𝙩𝙤 𝙙𝙖𝙩𝙚 🎯")
-    end
-end
-
-auto_update()
 local allowedCountries = {
   ["TN"] = true,
   ["DZ"] = true,
@@ -443,7 +400,7 @@ function toBoldItalic(str)
     result = result .. (map[c] or c)
   end
   return result
-end
+    end
 
 local raw_time = os.date("%Y-%m-%d %H:%M:%S")
 local fancy_time = toBoldItalic(raw_time)
@@ -1654,6 +1611,7 @@ function subMenu2()
     "➤ 🌳🌳 𝘼𝙢𝙖𝙯𝙤𝙣-𝙑𝙚𝙣𝙞𝙘𝙚 🌲🌲",
     "➤ 🌳🌳 𝘼𝙢𝙖𝙯𝙤𝙣-𝙈𝙤𝙣𝙨𝙩𝙚𝙧𝙁𝙞𝙚𝙡𝙙 👹🧌",
     "➤ 🌳🌳 𝘼𝙢𝙖𝙯𝙤𝙣-𝙕𝙤𝙢𝙗𝙞𝙚𝘽𝙖𝙩𝙩𝙡𝙚 🧟‍♂️🧟‍♂️ ",
+    "➤ 🌳🌳 𝘼𝙢𝙖𝙯𝙤𝙣-𝙋𝙤𝙡𝙡𝙪𝙩𝙚𝙙𝙎𝙚𝙖 🌊🦈",
     "➤ 𝙍𝙚𝙩𝙪𝙧𝙣 𝙩𝙤 𝙝𝙤𝙢𝙚𝙥𝙖𝙜𝙚"
   }
 
@@ -1674,39 +1632,50 @@ function subMenu2()
   if choice == 1 then
     gg.clearResults()
     gg.setRanges(gg.REGION_ANONYMOUS)
-    gg.searchNumber(';Nomal_Amazon',gg.TYPE_WORD)
+    gg.searchNumber(';Map_Nomal_Amazon',gg.TYPE_WORD)
     gg.getResults(100)
-    gg.editAll(';Nomal_Sahara',gg.TYPE_WORD)
+    gg.editAll(';Map_Nomal_Sahara',gg.TYPE_WORD)
     gg.toast('🛫🛫𝙉𝙤𝙬 𝙍𝙚𝙟𝙤𝙞𝙣🛫🛫')
 
   elseif choice == 2 then
     gg.clearResults()
     gg.setRanges(gg.REGION_ANONYMOUS)
-    gg.searchNumber(';Nomal_Amazon',gg.TYPE_WORD)
+    gg.searchNumber(';Map_Nomal_Amazon',gg.TYPE_WORD)
     gg.getResults(100)
-    gg.editAll(';Nomal_Venice',gg.TYPE_WORD)
+    gg.editAll(';Map_Nomal_Venice',gg.TYPE_WORD)
     gg.toast('🛫🛫𝙉𝙤𝙬 𝙍𝙚𝙟𝙤𝙞𝙣🛫🛫')
 
   elseif choice == 3 then
     gg.clearResults()
     gg.setRanges(gg.REGION_ANONYMOUS)
-    gg.searchNumber(';Nomal_Amazon',gg.TYPE_WORD)
+    gg.searchNumber(';Map_Nomal_Amazon',gg.TYPE_WORD)
     gg.getResults(100)
-    gg.editAll(';MonsterField',gg.TYPE_WORD)
+    gg.editAll(';Map_MonsterField',gg.TYPE_WORD)
     gg.toast('🛫🛫𝙉𝙤𝙬 𝙍𝙚𝙟𝙤𝙞𝙣🛫🛫')
 
   elseif choice == 4 then
     gg.clearResults()
     gg.setRanges(gg.REGION_ANONYMOUS)
-    gg.searchNumber(';Nomal_Amazon',gg.TYPE_WORD)
+    gg.searchNumber(';Map_Nomal_Amazon',gg.TYPE_WORD)
     gg.getResults(100)
-    gg.editAll(';ZombieBattle',gg.TYPE_WORD)
+    gg.editAll(';Map_ZombieBattle',gg.TYPE_WORD)
     gg.toast('🛫🛫𝙉𝙤𝙬 𝙍𝙚𝙟𝙤𝙞𝙣🛫🛫')
-
-  elseif choice == 5 then
+elseif choice == 5 then
+gg.clearResults()
+    gg.setRanges(gg.REGION_ANONYMOUS)
+    gg.searchNumber(';Map_Nomal_Amazon',gg.TYPE_WORD)
+    gg.getResults(100)
+    gg.editAll(';Map_SharkBoss',gg.TYPE_WORD)
+    gg.toast('🛫🛫𝙉𝙤𝙬 𝙍𝙚𝙟𝙤𝙞𝙣🛫🛫')
+  elseif choice == 6 then
     return mainMenu()
   end
 end
+if choice == 36 then
+  zt = 37
+  subMenu2()
+end   
+end 
 if choice == 36 then
   zt = 37
   subMenu2()
